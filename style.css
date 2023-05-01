@@ -12,13 +12,13 @@
 
     body {
         background-color:#F4F6F0;
-        color: #82cf77;
+        color: #130d4dd0;
         font-family:'IBM Plex Sans', sans-serif;
         font-size: 1rem;
         min-height: 100%;
     }
 
-    .grid-container-primary > * {
+    .grid-container-primary  > * {
         box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
         border-radius: 4px;
         padding: 10px;
@@ -27,13 +27,36 @@
 
     .navbar {
         grid-area: navbar;
-        background-color: #7743D4;
-    
+        display: flex;
+        background-color: rgb(165, 247, 117);
+        justify-content: space-between;
+        align-items: center;
     }
-/*ver si se puede achicar el alto del header */
+
+    .nav-links {
+       list-style: none;
+    }
+
+    .nav-links li{
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    .nav-links li:hover{
+        transform: scale(1.1);
+    }
+
+    .nav-links a{
+        font-size: 1.2rem;
+        color: #918f8f;
+        text-decoration: none;
+    }
+
+
+
     .header {   
         grid-area: header;
-            background-color: #F4F6F0;
+        background-color: #F4F6F0;
     }
 
     .section {
@@ -55,30 +78,20 @@
         display: grid;
         gap: 5px;
         grid-template-areas:
-        "header"
         "navbar"
+        "header"
         "main"  
         "sidebar"
         "footer";
-    }
-
-    #insideNav {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto
-        
     }
  
     @media (min-width: 600px) {
         .grid-container-primary {
             grid-template:
+            "navbar navbar" 150px
             "header header" 200px
-            "navbar navbar" 50px
             "main   sidebar" auto
-            "footer footer" 100px / auto 250px;
-        }
-        #insideNav {
-            display: grid;
-            grid-template-columns: auto auto auto auto auto
+            "footer footer" 100px / auto auto;
         }
     }
 
@@ -86,16 +99,44 @@
         .grid-container-primary{
             grid-template:
             "header header header"  200px
-            "navbar  main   sidebar" auto
-            "footer footer footer"  100px / 150px  auto  250px;
-        }
-        #insideNav {
-            display: grid;
-            grid-template-columns: auto
+            "navbar  main  sidebar" auto
+            "footer footer footer"  100px /  150px  auto  200px;
         }
     }
 
-.seccionmascotas {
-    display: grid;
-    grid-template-columns: auto auto auto auto
-}
+    .grid-container-second  > * {
+        box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .grid-container-second {
+        display: grid;
+        gap: 5px;
+        grid-template-areas:
+        "navbar"
+        "header"
+        "main"  
+        "sidebar"
+        "footer";
+    }
+ 
+    @media (min-width: 600px) {
+        .grid-container-second {
+            grid-template:
+            "navbar navbar" 150px
+            "header header" 200px
+            "main   main"   auto
+            "footer footer" 100px / auto auto;
+        }
+    }
+
+    @media (min-width: 900px) {
+        .grid-container-second{
+            grid-template:
+            "header header header"  200px
+            "navbar  main  main"    auto
+            "footer footer footer"  100px / 150px  auto  auto;
+        }
+    }
