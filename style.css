@@ -249,3 +249,48 @@ body {
       "footer footer footer" auto / 150px 100% auto;
   }
 }
+
+.secciomascotas {
+  width: 600px;
+	margin: 0 auto;
+	padding: 50px;
+
+}
+.secciomascotas div {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid brown;
+	border-radius: 10px;
+	
+}
+
+.secciomascotas div:hover {
+	border-color: #583e0a;
+	
+}
+
+.secciomascotas div:active {
+	border-color: #088c19;
+}
+
+.secciomascotas div:hover h2{
+	font-size: 33px;
+}
+
+.secciomascotas h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+.poster {
+  width: 200px;
+  height: 200px;
+
+  
+}
