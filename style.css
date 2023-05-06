@@ -266,6 +266,7 @@ body {
   background: var(--i);
   background-size: cover;
   box-shadow: 3px 5px 5px  rgba(3, 32, 51, .8);
+  cursor: pointer;
 }
 
 .contenido {
@@ -277,17 +278,23 @@ body {
   justify-content: center;
   background-color:  rgba(0, 0, 0, .4);
   opacity: 0;
-  transition: .5s;
+  transition: 1s all;
   overflow: hidden;
-
-}
-.contenido h2, a{
-  color:  aquamarine;
-  font-size: 30px;
-	font-weight: bold;
+  color:  lightgray;
   margin: 10px 0;
+  font-family: 'Monserrat', sans-serif
+}
+
+.contenido:hover h2 {
+  transform: scale(1.5);
+  font-weight: bold;
+}
+.contenido p {
+  font-size: 15px;
 }
 
 .card:hover .contenido {
   opacity: 2;
+  border-radius: 5px;
+
 }
