@@ -4,8 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 html {
@@ -16,7 +15,7 @@ body {
   background-color: #f4f6f0;
   color: #130d4dd0;
   min-height: 100%;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 .grid-container-primary > * {
@@ -48,12 +47,16 @@ body {
   display: inline-block;
   padding: 0 30px 2px;
   margin: bottom;
+  font-weight: bold;
 }
 
 .nav-links li:hover {
   transform: scale(1.1);
 }
 
+.items:before {
+  content: "🐾";
+}
 .nav-links a {
   font-size: 700;
   color: #807d7d;
@@ -254,11 +257,16 @@ body {
 /*seccionmascotas*/
 
 .main {
-  background: floralwhite  url("fondo.png");
+  background: rgb(247, 245, 240)  url("fondo.png");
+
+}
+
+.mascotas {
+  
+  display: inline-block;
 }
 
 .card {
-
   margin: 20px;
   width: 350px;
   height: 300px;
@@ -267,6 +275,7 @@ body {
   background-size: cover;
   box-shadow: 3px 5px 5px  rgba(3, 32, 51, .8);
   cursor: pointer;
+
 }
 
 .contenido {
@@ -281,20 +290,46 @@ body {
   transition: 1s all;
   overflow: hidden;
   color:  lightgray;
-  margin: 10px 0;
-  font-family: 'Monserrat', sans-serif
+  margin: 10px 0; 
 }
 
 .contenido:hover h2 {
-  transform: scale(1.5);
+  transform: scale(1.8);
   font-weight: bold;
+  padding-bottom: 15px;
 }
-.contenido p {
-  font-size: 15px;
+.contenido p{
+  font-size: 13px;
+  line-height: 1.5;
+  
 }
 
 .card:hover .contenido {
   opacity: 2;
   border-radius: 5px;
+}
 
+.pets {
+  text-align: center;
+  padding: 0 auto;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+.pets p li {
+  font-size: 5px;
+}
+
+.lista-dato {
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+  text-align: justify;
+}
+.dato {
+	line-height: 1.5;
+  list-style-type: none;
+}
+.dato:before {
+  content: "★";
 }
